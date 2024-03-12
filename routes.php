@@ -52,7 +52,7 @@
     [
         'uri' => '/register',
         'method' => 'GET',
-        'controller' => '../controllers/Login/create.php',
+        'controller' => '../controllers/Login/register.php',
         'middleware' => null
     ],
 

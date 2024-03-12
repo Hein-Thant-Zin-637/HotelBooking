@@ -1,5 +1,8 @@
 @media screen and (min-width: 768px) {
     .img-height{
-        height: 700px !important;
+        height: 370px !important;
+    }
+    .container{
+        width: 50% !important;
     }
 }

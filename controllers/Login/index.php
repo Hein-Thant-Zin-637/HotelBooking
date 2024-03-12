@@ -1,4 +1,4 @@
 <?php
-  $title = "Home";
+  $title = "Login";
   require('../view/Login/index.view.php');
 ?>

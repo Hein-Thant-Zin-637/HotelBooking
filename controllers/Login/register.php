@@ -1,5 +1,5 @@
 <?php
 
-$title = 'Create account';
+$title = 'Register';
 
-require('view/registration/create.view.php');
+require('../view/Login/register.view.php');
