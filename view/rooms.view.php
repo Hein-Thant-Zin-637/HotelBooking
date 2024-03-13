@@ -23,7 +23,11 @@
                               <p class=" fs-5">Max Childs : <?= $room['max_childs'] ?></p>
                               <div class="d-flex flex-row justify-content-between">
                                  <p class=" fs-5">Number Of Bed : <?= $room['no_of_bed'] ?></p>
-                                 <button class="btn btn-lg btn-outline-success">Booking</button>
+                                 <form action="/booking" method="GET">
+                                    <input type="hidden" name="room_id" value="<?= $room['id'] ?>">
+                                    <button type="submit" class="btn btn-lg btn-outline-success">Booking</button>
+                                 </form>
+                                 
                               </div> 
                            </div>
                         </div>

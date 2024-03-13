@@ -46,41 +46,62 @@
         'uri' => '/login',
         'method' => 'GET',
         'controller' => '../controllers/Login/index.php',
-        'middleware' => null
+        'middleware' => 'guest'
     ],
 
     [
         'uri' => '/login',
         'method' => 'POST',
         'controller' => '../controllers/Login/check.php',
-        'middleware' => null
+        'middleware' => 'guest'
     ],
 
     [
         'uri' => '/register',
         'method' => 'GET',
         'controller' => '../controllers/Login/register.php',
-        'middleware' => null
+        'middleware' => 'guest'
     ],
 
     [
         'uri' => '/register',
         'method' => 'POST',
         'controller' => '../controllers/Login/store.php',
-        'middleware' => null
+        'middleware' => 'guest'
+    ],
+
+    [
+        'uri' => '/admin',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/index.php',
+        'middleware' => 'auth'
     ],
 
     [
         'uri' => '/profile',
         'method' => 'GET',
-        'controller' => '../controllers/profile.php',
+        'controller' => '../controllers/profile/profile.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/profile',
+        'method' => 'PATCH',
+        'controller' => '../controllers/profile/store.php',
         'middleware' => 'auth'
     ],
 
     [
         'uri' => '/booking',
         'method' => 'GET',
-        'controller' => '../controllers/booking.php',
+        'controller' => '../controllers/booking/booking.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/booking',
+        'method' => 'POST',
+        'controller' => '../controllers/booking/store.php',
         'middleware' => 'auth'
     ],
 

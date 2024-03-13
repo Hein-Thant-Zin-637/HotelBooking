@@ -47,6 +47,14 @@ if (strlen($conpassword) === 0) {
     $errors['conpassword'] = 'Please provide a Confirm password';
 }
 
+$user = $db->query('select * from account where email=:email', [
+    'email' => $email
+])->find();
+
+if ($user) {
+    $errors['email'] = 'Account with this email already exists';
+}
+
 if (!empty($errors)) {
     $title = 'Contact';
     require('../view/Login/register.view.php');

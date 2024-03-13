@@ -34,14 +34,26 @@
             <a class="nav-link " href="/contact">Contact </a>
           </li>
           <?php if (isset($_SESSION['user'])): ?>
+            <?php if ($_SESSION['user']['role'] == true ) : ?>
+              <li class="nav-item px-2 ">
+                <a class="nav-link " href="/admin">Admin </a>
+              </li>
+            <?php endif ?>
+          <?php endif ?>
+          <?php if (isset($_SESSION['user'])): ?>
             <div class="dropdown">
-              <li class="nav-item me-4 px-2 <?= ($_SERVER['REQUEST_URI'] === "/profile" or $_SERVER['REQUEST_URI'] === "/booking") ? "border-bottom border-success border-3" : '' ?>">
+              <li
+                class="nav-item me-4 px-2 <?= ($_SERVER['REQUEST_URI'] === "/profile" or $_SERVER['REQUEST_URI'] === "/booking") ? "border-bottom border-success border-3" : '' ?>">
                 <button type="button" class="nav-link" data-bs-toggle="dropdown">My Account</button>
                 <ul class="dropdown-menu border-none fs-5">
                   <li><a class="dropdown-item" href="/profile">Update Profile</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="/booking">Booking</a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="/logout">Logout</a></li>
                 </ul>
               </li>

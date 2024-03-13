@@ -4,7 +4,8 @@
    <h1 class="text-center mt-3 mb-5">
       <?= $title ?>
    </h1>
-   <form action="/contact" class="container fs-4 " method="POST">
+   <form action="/profile" class="container fs-4 " method="POST">
+      <input type="hidden" name="method" value="PATCH">
       <div class="mb-3">
          <label for="name" class="form-label">Name:</label>
          <input type="text" class="form-control shadow-none fs-5" id="name" placeholder="Enter Name" name="name" value="<?= $user['name'] ?? '' ?>">
