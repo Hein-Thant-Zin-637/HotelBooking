@@ -10,14 +10,14 @@ class Router
             if ($route['uri'] === $uri && $route['method'] === $method) {
                 if ($route['middleware'] === 'guest') {
                     if ($_SESSION['user'] ?? false) {
-                        header('location: /home');
+                        header('location: /');
                         exit();
                     }
                 }
 
                 if ($route['middleware'] === 'auth') {
                     if (!$_SESSION['user'] ?? false) {
-                        header('location: /home');
+                        header('location: /');
                         exit();
                     }
                 }

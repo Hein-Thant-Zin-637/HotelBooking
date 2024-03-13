@@ -1,4 +1,7 @@
 <?php
+
+$title = "Contact";
+
 $config = require('../config.php');
 
 $db = new Database($config['database']);
@@ -38,7 +41,7 @@ if (strlen($phone) === 0) {
     $errors['phone'] = 'Please provide a phone number';
 }
 
-if (strlen($phone) === 0) {
+if (strlen($message) === 0) {
     $errors['message'] = 'Please enter your message';
 }
 

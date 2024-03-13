@@ -1,10 +1,10 @@
-
-
 <nav class="navbar navbar-expand-md bg-body-tertiary fs-5">
   <div class="container-fluid">
-    <a class="navbar-brand d-md-none" href="#"><h2><i>HBMS</i></h2></a>
-    <button class="navbar-toggler border-2 border-success shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand d-md-none" href="#">
+      <h2><i>HBMS</i></h2>
+    </a>
+    <button class="navbar-toggler border-2 border-success shadow-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon text-success"></span>
     </button>
     <div class="collapse navbar-collapse w-100" id="navbarNav">
@@ -35,15 +35,20 @@
           </li>
           <?php if (isset($_SESSION['user'])): ?>
             <div class="dropdown">
-              <button type="button" class="btn btn-primary dropdown-toggle  <?= ($_SERVER['REQUEST_URI'] === "/profile" or $_SERVER['REQUEST_URI'] === "/booking") ? "border-bottom border-success border-3" : '' ?>" data-bs-toggle="dropdown">My Account</button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Booking</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
-              </ul>
+              <li class="nav-item me-4 px-2 <?= ($_SERVER['REQUEST_URI'] === "/profile" or $_SERVER['REQUEST_URI'] === "/booking") ? "border-bottom border-success border-3" : '' ?>">
+                <button type="button" class="nav-link" data-bs-toggle="dropdown">My Account</button>
+                <ul class="dropdown-menu border-none fs-5">
+                  <li><a class="dropdown-item" href="/profile">Update Profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/booking">Booking</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+              </li>
             </div>
           <?php else: ?>
-            <li class="nav-item  me-4 px-2 <?= ($_SERVER['REQUEST_URI'] === "/login" or $_SERVER['REQUEST_URI'] === "/register") ? "border-bottom border-success border-3" : '' ?>">
+            <li
+              class="nav-item  me-4 px-2 <?= ($_SERVER['REQUEST_URI'] === "/login" or $_SERVER['REQUEST_URI'] === "/register") ? "border-bottom border-success border-3" : '' ?>">
               <a class="nav-link" href="/login">Login </a>
             </li>
           <?php endif ?>

@@ -31,14 +31,14 @@
     [
         'uri' => '/contact',
         'method' => 'GET',
-        'controller' => '../controllers/contact.php',
+        'controller' => '../controllers/contact/contact.php',
         'middleware' => null
     ],
 
     [
         'uri' => '/contact',
         'method' => 'POST',
-        'controller' => '../controllers/contactstore.php',
+        'controller' => '../controllers/contact/store.php',
         'middleware' => null
     ],
 
@@ -50,6 +50,13 @@
     ],
 
     [
+        'uri' => '/login',
+        'method' => 'POST',
+        'controller' => '../controllers/Login/check.php',
+        'middleware' => null
+    ],
+
+    [
         'uri' => '/register',
         'method' => 'GET',
         'controller' => '../controllers/Login/register.php',
@@ -57,17 +64,31 @@
     ],
 
     [
+        'uri' => '/register',
+        'method' => 'POST',
+        'controller' => '../controllers/Login/store.php',
+        'middleware' => null
+    ],
+
+    [
         'uri' => '/profile',
         'method' => 'GET',
         'controller' => '../controllers/profile.php',
-        'middleware' => null
+        'middleware' => 'auth'
     ],
 
     [
         'uri' => '/booking',
         'method' => 'GET',
         'controller' => '../controllers/booking.php',
-        'middleware' => null
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/logout',
+        'method' => 'GET',
+        'controller' => '../controllers/Login/logout.php',
+        'middleware' => 'auth'
     ],
 
 ];
