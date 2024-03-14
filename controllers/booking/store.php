@@ -12,6 +12,7 @@ $db = new Database($config['database']);
 
 $today=date("Y-m-d");
 
+$bookingid = uniqid();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = test_input($_POST["name"]);
@@ -76,14 +77,15 @@ if (!empty($errors)) {
 }
 
 
-$db->query("INSERT INTO `bookings`( `account_id`, `rooms_id`, `check_in_date`, `check_out_date`, `booking_date`, `special_request`, `states`) VALUES ( :account_id, :rooms_id, :check_in_date, :check_out_date, :booking_date, :special_request, :states )", [
+$db->query("INSERT INTO `bookings`( `id`, `account_id`, `rooms_id`, `check_in_date`, `check_out_date`, `booking_date`, `special_request`, `status`) VALUES ( :id, :account_id, :rooms_id, :check_in_date, :check_out_date, :booking_date, :special_request, :status )", [
+    'id' => $bookingid,
     'account_id' => $user['id'],
     'rooms_id' => (int)$roomid,
     'check_in_date' => $checkin,
     'check_out_date' => $checkout,
     'booking_date' => $today,
     'special_request' => $request,
-    'states' => 'Pending',
+    'status' => 'Pending',
 ]);
 
 

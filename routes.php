@@ -112,6 +112,20 @@
         'middleware' => 'auth'
     ],
 
+    [
+        'uri' => '/mybooking',
+        'method' => 'GET',
+        'controller' => '../controllers/mybooking/index.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/bookingdetail',
+        'method' => 'GET',
+        'controller' => '../controllers/mybooking/detail.php',
+        'middleware' => 'auth'
+    ],
+
 ];
 
 ?>

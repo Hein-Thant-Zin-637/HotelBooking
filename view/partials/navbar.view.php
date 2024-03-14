@@ -50,7 +50,7 @@
                   <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="/booking">Booking</a></li>
+                  <li><a class="dropdown-item" href="/mybooking">My Booking</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>

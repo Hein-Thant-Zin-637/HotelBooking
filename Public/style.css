@@ -6,3 +6,11 @@
         width: 50% !important;
     }
 }
+
+tr th{
+    height: 70px !important;
+}
+
+tr td{
+    height: 50px !important;
+}
