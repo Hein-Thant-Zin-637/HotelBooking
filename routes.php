@@ -125,6 +125,12 @@
         'controller' => '../controllers/mybooking/detail.php',
         'middleware' => 'auth'
     ],
+    [
+        'uri' => '/allbooking',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/booking.php',
+        'middleware' => 'auth'
+    ],
 
 ];
 
