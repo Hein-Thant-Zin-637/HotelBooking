@@ -125,10 +125,25 @@
         'controller' => '../controllers/mybooking/detail.php',
         'middleware' => 'auth'
     ],
+
+    [
+        'uri' => '/allbooking',
+        'method' => 'PATCH',
+        'controller' => '../controllers/admin/booking/store.php',
+        'middleware' => 'auth'
+    ],
+
     [
         'uri' => '/allbooking',
         'method' => 'GET',
-        'controller' => '../controllers/admin/booking.php',
+        'controller' => '../controllers/admin/booking/booking.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/adminbookingdetail',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/booking/bookingdetail.php',
         'middleware' => 'auth'
     ],
 

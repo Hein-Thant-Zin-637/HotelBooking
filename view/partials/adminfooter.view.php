@@ -39,7 +39,7 @@
   var currentTheme = localStorage.getItem('theme');
   var mainHeader = document.querySelector('.main-header');
   var mainSidebar = document.querySelector('.main-sidebar');
-  var table = document.querySelector('#example1');
+  var table = document.querySelector('#table');
 
 
   if (currentTheme) {
