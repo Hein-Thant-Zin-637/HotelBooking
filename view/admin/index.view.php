@@ -9,7 +9,7 @@
             <div class="small-box bg-yellow">
                 <div class="inner">
                     <h3>
-                        <?= $status[2]['count'] ?>
+                        <?= $status[2]['count'] ?? '0' ?>
                     </h3>
                     <p class="fs-4">New Booking</p>
                 </div>
@@ -23,7 +23,7 @@
             <div class="small-box bg-success">
                 <div class="inner">
                     <h3>
-                        <?= $status[1]['count'] ?>
+                        <?= $status[1]['count'] ?? '0' ?>
                     </h3>
                     <p class="fs-4">Confirm Booking</p>
                 </div>
@@ -37,7 +37,7 @@
             <div class="small-box bg-danger">
                 <div class="inner">
                     <h3>
-                        <?= $status[0]['count'] ?>
+                        <?= $status[0]['count'] ?? '0' ?>
                     </h3>
                     <p class="fs-4">Cancel Booking</p>
                 </div>

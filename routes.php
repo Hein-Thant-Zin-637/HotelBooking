@@ -167,7 +167,77 @@
         'controller' => '../controllers/admin/account/delete.php',
         'middleware' => 'auth'
     ],
+
+    [
+        'uri' => '/hotels',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/hotels/index.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/hotels',
+        'method' => 'UPDATE',
+        'controller' => '../controllers/admin/hotels/update.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/allcontact',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/contact/index.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/allcontact',
+        'method' => 'DELETE',
+        'controller' => '../controllers/admin/contact/delete.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/allfacilities',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/facilities/index.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/allfacilities',
+        'method' => 'DELETE',
+        'controller' => '../controllers/admin/facilities/delete.php',
+        'middleware' => 'auth'
+    ],
+
+
+    [
+        'uri' => '/addfacilities',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/facilities/addpage.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/addfacilities',
+        'method' => 'POST',
+        'controller' => '../controllers/admin/facilities/store.php',
+        'middleware' => 'auth'
+    ],
     
+    [
+        'uri' => '/updatefacilities',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/facilities/updatepage.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/updatefacilities',
+        'method' => 'UPDATE',
+        'controller' => '../controllers/admin/facilities/updae.php',
+        'middleware' => 'auth'
+    ],
 
 ];
 

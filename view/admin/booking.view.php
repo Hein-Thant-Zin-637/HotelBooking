@@ -47,8 +47,8 @@
                                 <?= $bookings[$i]['status'] ?>
                             </td>
                             <td class="d-flex flex-row gap-2">
-                                <a href="/adminbookingdetail?id=<?= $bookings[$i]['id'] ?>" type="submit" class="btn btn-success">Details</a>
-                                <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#<?= $bookings[$i]['id'] ?>">Remark</button>
+                                <a href="/adminbookingdetail?id=<?= $bookings[$i]['id'] ?>" type="submit" class="btn btn-outline-success">Details</a>
+                                <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#<?= $bookings[$i]['id'] ?>">Remark</button>
                             </td>
 
                         </tr>
