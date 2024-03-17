@@ -112,7 +112,6 @@
 </div>
 
 
-<?php require("../view/admin/script/chart.view.php") ?>
+<?php require("../view/admin/footer/chart.view.php") ?>
 
 
-<?php require("../view/partials/adminfooter.view.php") ?>

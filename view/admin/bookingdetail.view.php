@@ -4,7 +4,7 @@
 
 <main class="content-wrapper p-3" style="margin-top:50px ;">
 
-<table  id="table" class="table fs-4  table-bordered">
+      <table  id="table" class="table fs-4  table-bordered">
          <thead>
             <tr>
                <th colspan="4" class="text-center m-3 fs-3">Booking Number : <?= $bookingid ?></th>
@@ -43,8 +43,7 @@
             </tr>
          </tbody>
       </table>
-   </div>
 
 </main>
 
-<?php require("../view/partials/adminfooter.view.php") ?>
+<?php require("../view/admin/footer/table.view.php") ?>

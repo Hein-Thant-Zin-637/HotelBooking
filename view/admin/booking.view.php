@@ -6,7 +6,7 @@
 
     <div class="card ">
         <div class="card-header">
-            <h3 class="card-title">DataTable with default features</h3>
+            <h3 class="card-title">Bookings Table</h3>
         </div>
         <div class="card-body">
             <table id="table" class="table table-bordered table-striped  ">
@@ -91,6 +91,4 @@
 
 </main>
 
-<?php require("../view/admin/script/table.view.php") ?>
-
-<?php require("../view/partials/adminfooter.view.php") ?>
+<?php require("../view/admin/footer/table.view.php") ?>

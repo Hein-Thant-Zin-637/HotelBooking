@@ -147,6 +147,28 @@
         'middleware' => 'auth'
     ],
 
+    [
+        'uri' => '/allaccount',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/account/index.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/allaccount',
+        'method' => 'PATCH',
+        'controller' => '../controllers/admin/account/changerole.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/allaccount',
+        'method' => 'DELETE',
+        'controller' => '../controllers/admin/account/delete.php',
+        'middleware' => 'auth'
+    ],
+    
+
 ];
 
 ?>
