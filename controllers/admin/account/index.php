@@ -1,4 +1,7 @@
 <?php
+
+  authorize( (boolean)$_SESSION['user']['role'] === true , 403);
+
   $title = "All Account";
     
   $config = require("../config.php");

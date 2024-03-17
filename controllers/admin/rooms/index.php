@@ -2,14 +2,14 @@
 
   authorize( (boolean)$_SESSION['user']['role'] === true , 403);
 
-  $title = "Hotels";
+  $title = "All Rooms";
     
   $config = require("../config.php");
   
   $db = new Database($config['database']);
 
-  $hotels = $db->query("SELECT * FROM `hotels`")->getall();
+  $rooms = $db->query("select * from rooms")->getall();
 
-  require('../view/admin/hotels.view.php');
+  require('../view/admin/rooms/index.view.php');
   
 ?>

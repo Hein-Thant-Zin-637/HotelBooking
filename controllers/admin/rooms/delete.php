@@ -2,20 +2,19 @@
 
   authorize( (boolean)$_SESSION['user']['role'] === true , 403);
 
-  $title = "Contact";
+  $title = "All Rooms";
     
   $config = require("../config.php");
   
   $db = new Database($config['database']);
 
-  $db->query( "DELETE FROM `contact` WHERE id = :id", [
+  $db->query( "DELETE FROM `rooms` WHERE id = :id", [
     'id' => $_POST['id']
 ]);
 
+  $rooms = $db->query("select * from rooms")->getall();
 
-$contact = $db->query("SELECT * FROM `contact` WHERE 1")->getall();
+  require('../view/admin/rooms/index.view.php');
 
 
-require('../view/admin/contact.view.php');
-  
 ?>

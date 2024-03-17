@@ -14,6 +14,7 @@
     function authorize($condition, $respon = 403){
         
         if(!$condition){
+            $title = $respon;
             require ("view/$respon.php");
             http_response_code($respon);
             die();

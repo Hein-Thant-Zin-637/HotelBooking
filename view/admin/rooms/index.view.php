@@ -7,8 +7,8 @@
     <div class="card ">
         <div class="card-header  w-100">
             <div class="d-flex flex-row align-items-center justify-content-between">
-                <h3 class="card-title float-left">Facilities Table</h3>
-                <a href="/addrooms" class="btn btn-outline-success float-right">Add Facilities</a>
+                <h3 class="card-title float-left">Rooms Table</h3>
+                <a href="/addrooms" class="btn btn-outline-success float-right">Add Room</a>
             </div>
         </div>
         <div class="card-body">
@@ -17,34 +17,50 @@
                     <tr>
                         <th>#</th>
                         <th>Image</th>
-                        <th>Title</th>
-                        <th>Description</th>
+                        <th>Room Type</th>
+                        <th>Adults</th>
+                        <th>Childs</th>
+                        <th>Bed</th>
+                        <th>Price</th>
+                        <th>description</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for ($i = 0; $i < sizeof($facilities); $i++): ?>
+                    <?php for ($i = 0; $i < sizeof($rooms); $i++): ?>
                         <tr>
                             <td>
                                 <?= $i + 1 ?>
                             </td>
                             <td class="">
-                                <img src="<?= $facilities[$i]['image'] ?>" alt="facilities Image"
+                                <img src="<?= $rooms[$i]['image'] ?>" alt="facilities Image"
                                     class="img-fluid img-thumbnail "
                                     style="max-width:145px !important; max-height:85px !important;">
                             </td>
                             <td>
-                                <?= $facilities[$i]['title'] ?>
+                                <?= $rooms[$i]['room_type'] ?>
                             </td>
                             <td>
-                                <?= $facilities[$i]['description'] ?>
+                                <?= $rooms[$i]['max_adults'] ?>
+                            </td>
+                            <td>
+                                <?= $rooms[$i]['max_childs'] ?>
+                            </td>
+                            <td>
+                                <?= $rooms[$i]['no_of_bed'] ?>
+                            </td>
+                            <td>
+                                <?= $rooms[$i]['price'] ?>
+                            </td>
+                            <td>
+                                <?= $rooms[$i]['description'] ?>
                             </td>
                             <td class="d-flex flex-row gap-2">
-                                <a href="/updatefacilities?id=<?= $facilities[$i]['id'] ?>" type="submit"
+                                <a href="/updaterooms?id=<?= $rooms[$i]['id'] ?>" type="submit"
                                     class="btn btn-outline-info">Update</a>
-                                <form action="/allfacilities" method="POST">
+                                <form action="/allrooms" method="POST">
                                     <input type="hidden" name="method" value="DELETE">
-                                    <input type="hidden" name="id" value="<?= $facilities[$i]['id'] ?>">
+                                    <input type="hidden" name="id" value="<?= $rooms[$i]['id'] ?>">
                                     <button type="submit" class="btn btn-outline-danger">Delete</button>
                                 </form>
                             </td>

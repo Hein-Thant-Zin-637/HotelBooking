@@ -235,7 +235,50 @@
     [
         'uri' => '/updatefacilities',
         'method' => 'UPDATE',
-        'controller' => '../controllers/admin/facilities/updae.php',
+        'controller' => '../controllers/admin/facilities/update.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/allrooms',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/rooms/index.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/allrooms',
+        'method' => 'DELETE',
+        'controller' => '../controllers/admin/rooms/delete.php',
+        'middleware' => 'auth'
+    ],
+
+
+    [
+        'uri' => '/addrooms',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/rooms/addpage.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/addrooms',
+        'method' => 'POST',
+        'controller' => '../controllers/admin/rooms/store.php',
+        'middleware' => 'auth'
+    ],
+    
+    [
+        'uri' => '/updaterooms',
+        'method' => 'GET',
+        'controller' => '../controllers/admin/rooms/updatepage.php',
+        'middleware' => 'auth'
+    ],
+
+    [
+        'uri' => '/updaterooms',
+        'method' => 'UPDATE',
+        'controller' => '../controllers/admin/rooms/update.php',
         'middleware' => 'auth'
     ],
 

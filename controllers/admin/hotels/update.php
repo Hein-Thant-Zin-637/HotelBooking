@@ -1,5 +1,7 @@
 <?php
 
+authorize( (boolean)$_SESSION['user']['role'] === true , 403);
+
 $title = "Contact";
 
 $config = require('../config.php');

@@ -6,8 +6,7 @@
     <form action="/addfacilities" class="mx-5 fs-4 " method="POST" enctype="multipart/form-data">
         <div class="mb-3 d-flex flex-column">
             <label for="imgInp" class="form-label">Image :</label>
-            <img src="/Image/default-ui-image.jpg" alt="defaultimage" id="defaultimg" class="my-3 img-fluid img-thumbnail " style="max-width:80% !important; max-height:400px !important;">
-            <img id="blah" src="#" alt="your image" class="my-3 img-fluid img-thumbnail " style="max-width:80% !important; max-height:400px !important;display: none;; " />
+            <img id="blah" src="/Image/default-ui-image.jpg" alt="your image" class="my-3 img-fluid img-thumbnail " style="max-width:80% !important; max-height:400px !important; " />
             <input class="form-control" type="file" accept="image/*" id="imgInp" name="image">
         </div>
         <div class="mb-3 mt-3">
@@ -36,8 +35,6 @@
  imgInp.onchange = evt => {
   const [file] = imgInp.files
   if (file) {
-    document.getElementById("defaultimg").style.display = "none";
-    document.getElementById("blah").style.display = "block";
     blah.src = URL.createObjectURL(file)
   }
 }
