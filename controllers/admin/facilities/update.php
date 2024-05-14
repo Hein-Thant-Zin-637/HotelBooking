@@ -16,7 +16,7 @@ $title = test_input($_POST["title"]);
 
 $description = test_input($_POST["description"]);
 
-$destination = uniqid().$_FILES['image']['name'];
+$destination = (boolean)$_FILES['image']['name'] ? uniqid().$_FILES['image']['name'] : $_POST['orgimage'];
 
 function test_input($data) {
     $data = trim($data);
@@ -43,13 +43,15 @@ if (!empty($errors)) {
     die();
 }
 
+if((boolean)$_FILES['image']['name']){
+    move_uploaded_file($_FILES['image']['tmp_name'] , "Image/facilities/".$destination);
+}
 
-move_uploaded_file($_FILES['image']['tmp_name'] , "Image/facilities/".$destination);
 
 $db->query("UPDATE `facilities` SET `title`= :title,`description`= :description,`image`= :image WHERE  id= :id", [
     'title' => $title,
     'description' => $description,
-    'image' => "/Image/facilities/".$destination,
+    'image' =>  (boolean)$_FILES['image']['name'] ? "/Image/rooms/".$destination : $destination,
     'id' => $_POST['id']
 ]);
 

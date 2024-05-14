@@ -29,6 +29,7 @@
         <?php endif ?>
         <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
         <input type="hidden" name="method" value="UPDATE">
+        <input type="hidden" name="orgimage" value="<?= $room['image'] ?>">
         <button type="submit" class="btn btn-success btn-lg mt-3">Update Facilities</button>
     </form>
 </main>
